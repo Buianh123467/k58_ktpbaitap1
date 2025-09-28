@@ -15,10 +15,12 @@ mssvk225510201001
 
 1 caesar
 Tên gọi: Caesar cipher (mã của Julius Caesar): dịch vòng các chữ cái theo một dịch chuyển k (shift)
+
 Thuật toán:
 Mã hóa: E(p) = (p + k) mod 26
 Giải mã: D(c) = (c - k) mod 26
 Không gian khóa: 26 khả năng
+
 Cách phá (không cần khóa)
 Brute force: thử 26 giá trị k.
 Phân tích tần suất: so sánh tần suất chữ cái -> khớp E -> suy k.
@@ -27,19 +29,22 @@ HTML, JS, CSS
 
 2. Afine
 Tên gọi: Affine cipher: biến đổi affine trên modular 26
+
 Thuật toán:
 Mã hóa: E(p) = (a*p + b) mod 26
 Giải mã: D(c) = a^{-1} * (c - b) mod 26
+
 Không gian mã hóa:
 a có φ(26)=12 giá trị (1,3,5,7,9,11,15,17,19,21,23,25)
 b có 26 giá trị → tổng 12*26 = 312 cặp (a,b).
+
 Cách phá (không cần khóa):
 Brute force dùng 312 cặp.
 Phân tích tần suất: với số lượng lớn văn bản, suy a,b bằng cách so khớp tần suất.
 Kết quả mã hóa và giải mã ( hình ảnh):
 HTML, JS, CSS:
 
-3. Hoán Vị:
+4. Hoán Vị:
 Tên gọi: Permutation cipher (hoán vị chữ cái) — thường là monoalphabetic substitution defined by a permutation of alphabet
 Thuật toán:
 Chuẩn bị một bảng ánh xạ 26 chữ cái → khóa là một hoán vị của A..Z.
@@ -52,7 +57,7 @@ Hill-climbing / simulated annealing: thuật toán tối ưu hóa trên không g
 Kết quả mã hóa và giải mã ( hình ảnh):
 HTML, JS, CSS:
 
-4. Vigenère
+5. Vigenère
 Tên gọi: Vigenère cipher — polyalphabetic substitution dùng khóa chữ.
 Thuật toán:
 Khóa: chuỗi chữ cái K = k0 k1 ... k(m-1).
@@ -66,7 +71,7 @@ Khi biết m → phân chia văn bản thành m dãy, mỗi dãy là Caesar ciph
 Kết quả mã hóa và giải mã ( hình ảnh):
 HTML, JS, CSS:
 
-5. PlayFair
+6. PlayFair
 Tên gọi: Playfair cipher — mã hai chữ một (digraph cipher) dùng ma trận 5×5.
 Quy ước riêng của thuật toán PlayFair:
 Thông thường gộp J vào I (hoặc bỏ Q) để được 25 chữ cái.
